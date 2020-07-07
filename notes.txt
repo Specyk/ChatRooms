@@ -1,0 +1,11 @@
+# React app
+
+^ Rooms List
+    - Input name form
+    - List
+        [Items: {name, members, last activity}]
+^ Chat
+    - Messages
+        [Message: {name, content, date}]
+    - Input message
+        
