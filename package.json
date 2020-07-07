@@ -2,5 +2,8 @@
   "name": "chat-rooms",
   "version": "0.1.0",
   "main": "src/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "directory-named-webpack-plugin": "^4.0.1"
+  }
 }
