@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
+import Header from './components/Header/Header'
 import RoomList from './components/RoomList/RoomList'
 import Chat from './components/Chat/Chat'
+
 import {
     BrowserRouter,
     Switch,
     Route,
 } from "react-router-dom";
 export default class App extends Component {
+    chooseRoomHandler = e => {
+        console.log("Wybrano pokoj")
+    }
 
     render() {
         return (
-            <div>
-
-                <BrowserRouter>
-                    <Switch>
-                        <Route exact path="/">
-                            <RoomList />
-                        </Route>
-                        <Route path="/chat">
-                            <Chat />
-                        </Route>
-
-                    </Switch>
-                </BrowserRouter>
-
-                <span>A chuaj nie dzialamy</span>
+            <div className="container">
+                <Header />
+                <div className="row">
+                    <div className="col-md-3">
+                        <RoomList chooseRoomHandler={this.chooseRoomHandler} />
+                    </div>
+                    <div className="col-md-9">
+                        <Chat />
+                    </div>
+                </div>
             </div>
         )
     }
