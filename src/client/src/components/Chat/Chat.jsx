@@ -3,8 +3,9 @@ import MessagesList from './MessagesList/MessagesList'
 import MembersList from './MembersList/MembersList'
 import SendMessageForm from './SendMessageForm'
 
-const sendMessageHandler = e => {
-    console.log(`Kliknięty`)
+const sendMessageHandler = message => e => {
+    e.preventDefault()
+    console.log(`Wyslano: ${message}`)
 }
 
 const getMessages = () => [

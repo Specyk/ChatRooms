@@ -4,6 +4,7 @@ import RoomEntry from './RoomEntry'
 export default function RoomEntries({ roomsArr, chooseRoomHandler }) {
     const createRoomEntry = (roomData) => (
         <RoomEntry
+            id={roomData._id}
             name={roomData.name}
             members={roomData.members}
             lastActivityTime={roomData.lastActivityTime}

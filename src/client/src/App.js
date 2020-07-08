@@ -9,8 +9,8 @@ import {
     Route,
 } from "react-router-dom";
 export default class App extends Component {
-    chooseRoomHandler = e => {
-        console.log("Wybrano pokoj")
+    chooseRoomHandler = id => e => {
+        console.log("Wybrano pokoj " + id)
     }
 
     render() {
