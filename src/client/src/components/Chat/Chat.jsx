@@ -38,7 +38,7 @@ const getMembers = () => [
 ]
 
 
-export default function Chat() {
+export default function Chat({ roomId }) {
     return (
         <div className="row">
             <div className="col-md-8">
