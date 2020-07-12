@@ -38,11 +38,12 @@ const getMembers = () => [
 ]
 
 
-export default function Chat({ roomId }) {
+export default function Chat(props) {
+
     return (
         <div className="row">
             <div className="col-md-8">
-                <MessagesList messagesArr={getMessages()} />
+                <MessagesList messagesArr={getMessages(props.match.params.chatId)} />
                 <SendMessageForm submitHandler={sendMessageHandler} />
             </div>
             <div className="col-md-4">

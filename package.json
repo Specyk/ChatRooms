@@ -5,5 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "directory-named-webpack-plugin": "^4.0.1"
+  },
+  "dependencies": {
+    "socket.io": "^2.3.0"
   }
 }

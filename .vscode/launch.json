@@ -4,11 +4,20 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Webpack Dev Server",
-      "program": "${workspaceFolder}/src/client/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-      "args": ["--progress"],
-      "sourceMaps": true,
-      "trace": true
+      "name": "Node.js server with nodemon",
+      "runtimeExecutable": "nodemon",
+      "program": "${workspaceFolder}/src/index.js",
+      "restart": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "React client app",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src/client"
     }
   ]
 }
