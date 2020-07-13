@@ -8,7 +8,8 @@ const keys = {
 
 const mongooseOptions = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 }
 
 async function main() {
