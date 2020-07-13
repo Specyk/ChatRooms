@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const { Schema, model } = mongoose
+const { Schema, model, Types } = require('mongoose')
 
 const ChatRoomSchema = new Schema({
     name: {
@@ -11,11 +10,11 @@ const ChatRoomSchema = new Schema({
         }
     },
     members: [{
-        type: mongoose.Types.ObjectId,
+        type: Types.ObjectId,
         ref: "users"
     }],
     messages: [{
-        type: mongoose.Types.ObjectId,
+        type: Types.ObjectId,
         ref: "messages"
     }]
 })
