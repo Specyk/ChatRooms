@@ -5,6 +5,10 @@ const MessageSchema = new Schema({
         type: Types.ObjectId,
         ref: 'users'
     },
+    chatRoom: {
+        type: Types.ObjectId,
+        ref: 'chatRooms'
+    },
     content: String,
     postDate: Date
 })
