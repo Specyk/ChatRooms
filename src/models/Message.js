@@ -1,7 +1,10 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model, Types } = require('mongoose')
 
 const MessageSchema = new Schema({
-    author: String,
+    author: {
+        type: Types.ObjectId,
+        ref: 'users'
+    },
     content: String,
     postDate: Date
 })
