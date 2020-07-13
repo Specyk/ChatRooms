@@ -4,9 +4,12 @@
   "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
-    "directory-named-webpack-plugin": "^4.0.1"
+    "nodemon": "^2.0.4"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "globby": "^11.0.1",
+    "mongoose": "^5.9.23",
     "socket.io": "^2.3.0"
   }
 }
