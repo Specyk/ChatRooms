@@ -33,7 +33,6 @@ describe('userService', () => {
         const foundDeletedUser = await User.findById(user._id)
         expect(foundDeletedUser).toBeNull()
     })
-
-});
+})
 
 
