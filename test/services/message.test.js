@@ -17,8 +17,8 @@ describe('messageService', () => {
         const author = userFactory.createUser()
         const chatRoom = chatRoomFactory.createChatRoom()
         await Promise.all([author.save(), chatRoom.save()])
-        const message = "czesc byku"
-        await messageService.sendMessage({ author, room: chatRoom, message })
+        const messageContent = "czesc byku"
+        await messageService.sendMessage({ author, chatRoom, messageContent })
         const foundMessage = await Message.findOne({ content: "czesc byku" })
         expect(foundMessage).toHaveProperty('content', "czesc byku")
     })
