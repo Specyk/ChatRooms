@@ -22,5 +22,10 @@ module.exports = {
             useCreateIndex: true
         }
         await mongoose.connect(mongoUrl, mongooseOptions)
+    },
+    closeDb: async () => mongoose.connection.close(),
+    clearDatabase: async () => {
+        const colNames = await mongoose.connection.db.listCollections().toArray()
+        colNames.forEach(async collection => await mongoose.connection.dropCollection(collection.name))
     }
 }
