@@ -5,7 +5,7 @@ const { getRandomElements } = require('../helpers')
 module.exports = {
     createChatRoom: (users) => new ChatRoom({
         name: faker.company.companyName(),
-        members: getRandomElements(users, 4).map(e => e._id),
+        members: users ? getRandomElements(users, 4).map(e => e._id) : [],
         messages: []
     })
 }
