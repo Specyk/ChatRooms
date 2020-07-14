@@ -3,7 +3,7 @@ const chatRoomService = require('../services/chatRoom')
 module.exports = {
     getRoomsHandler: async (req, res, next) => {
         try {
-            const rooms = chatRoomService.getRooms()
+            const rooms = await chatRoomService.getRooms()
             res.json(rooms)
         } catch (err) {
             console.log(`${req.url} error: ${err}`)
