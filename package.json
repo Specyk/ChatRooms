@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon src/index",
+    "client": "cd src/client && yarn start",
     "test": "jest"
   },
   "devDependencies": {
