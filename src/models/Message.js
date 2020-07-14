@@ -9,7 +9,14 @@ const MessageSchema = new Schema({
         type: Types.ObjectId,
         ref: 'chatRooms'
     },
-    content: String,
+    content: {
+        type: String,
+        required: [true, "Message must have a content"],
+        validate: {
+            validator: content => content.length > 0,
+            message: () => `Message is empty!`
+        }
+    },
     postDate: Date
 })
 
