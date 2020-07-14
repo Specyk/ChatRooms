@@ -6,8 +6,8 @@ module.exports = {
             .populate('members')
         return rooms
     },
-    getRoom: async (id) => {
-        const room = Room.findById({ id })
+    getRoomById: async (id) => {
+        const room = Room.findById(id)
             .populate('messages')
             .populate('members')
         return room

@@ -1,11 +1,11 @@
 const Message = require('../models/Message')
 
 module.exports = {
-    sendMessage: async ({ author, room, message }) => {
+    sendMessage: async ({ authorId, chatRoomId, messageContent }) => {
         const msg = new Message({
-            author: author._id,
-            chatRoom: room._id,
-            content: message,
+            author: authorId,
+            chatRoom: chatRoomId,
+            content: messageContent,
             postDate: Date.now()
         })
         await msg.save()
