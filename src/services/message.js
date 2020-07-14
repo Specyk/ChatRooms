@@ -9,5 +9,9 @@ module.exports = {
             postDate: Date.now()
         })
         await msg.save()
+    },
+    deleteMessageById: async (id) => {
+        await Message.findOneAndDelete({ _id: id })
+        return id
     }
 }
