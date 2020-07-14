@@ -13,6 +13,12 @@
       "skipFiles": ["<node_internals>/**"]
     },
     {
+      "type": "node",
+      "request": "launch",
+      "name": "Node file",
+      "program": "${file}"
+    },
+    {
       "type": "chrome",
       "request": "launch",
       "name": "React client app",
