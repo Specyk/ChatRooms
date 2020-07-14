@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "faker": "^4.1.0",
-    "jest": "^26.1.0",
+    "jest": "^24.9.0",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
