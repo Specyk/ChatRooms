@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux'
 
 const reducers = {
-    messagesReducer: (messages, action) => {
+    messagesReducer: (state = null, action) => {
         if (action.type == "SEND_MESSAGE") {
-            return [...messages, action.payload]
+            return [...state, action.payload]
         }
-        return messages
+        return state
     },
-    selectRoomReducer: (state, action) => {
+    selectRoomReducer: (state = null, action) => {
         if (action.type == "SELECT_ROOM") {
             return { ...action.payload }
         }
