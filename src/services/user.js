@@ -2,7 +2,7 @@ const User = require('../models/User')
 
 module.exports = {
     getUser: async (id) => {
-        const user = User.findById({ id })
+        const user = User.findById(id)
         return user
     },
     createUser: async (name) => {
