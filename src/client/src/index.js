@@ -4,11 +4,12 @@ import App from './components/App'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import reducers from './reducers'
 
 ReactDOM.render((
-    <Provider store={createStore(reducers)}>
+    <Provider store={createStore(reducers, applyMiddleware(thunk))}>
         <App />
     </Provider>
-), document.getElementById('root'));
-module.hot.accept();
+), document.getElementById('root'))
+module.hot.accept()
