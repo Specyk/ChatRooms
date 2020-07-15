@@ -15,7 +15,7 @@ app.use('/',
     express.json()
 )
 
-app.use('/', routesLoader(path.join(__dirname, 'routes')))
+app.use('/api', routesLoader(path.join(__dirname, 'routes')))
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
