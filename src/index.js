@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const expressServer = require('./server').httpServer
-const port = 3000
+const port = 5000
 
 const keys = {
     mongoURI: 'mongodb://localhost/chatrooms'
