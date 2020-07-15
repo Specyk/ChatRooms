@@ -15,13 +15,13 @@ module.exports = {
         return randoms
     },
     connectDb: async () => {
-        const mongoUrl = 'mongodb://localhost/chatrooms_test'
+        const mongoURI = 'mongodb://localhost/chatrooms_test'
         const mongooseOptions = {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
         }
-        await mongoose.connect(mongoUrl, mongooseOptions)
+        await mongoose.connect(mongoURI, mongooseOptions)
     },
     closeDb: async () => mongoose.connection.close(),
     clearDatabase: async () => {

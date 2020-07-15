@@ -12,10 +12,16 @@ const io = socketio(httpServer)
 loadSocketConfiguration(io)
 
 app.use('/',
-    express.json(),
-    routesLoader(path.join(__dirname, 'routes'))
+    express.json()
 )
 
+app.use('/', routesLoader(path.join(__dirname, 'routes')))
+
 app.get('/', (req, res) => res.send('Hello World!'))
+
+app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+})
 
 module.exports = { httpServer, io }

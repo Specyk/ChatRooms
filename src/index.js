@@ -24,7 +24,8 @@ async function main() {
     expressServer.listen(port, () => console.log(`ChatRooms server is listening on port ${port}`))
 }
 
-main().then(() => console.log('ChatRooms app is running'))
+main()
+    .then(() => console.log('ChatRooms app is running'))
     .catch((err) => console.log(`ChatRooms app running error: ${err}`))
 
 
