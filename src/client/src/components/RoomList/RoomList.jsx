@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 export default function RoomList({ chooseRoomHandler }) {
     const roomsArr = useSelector(state => state.rooms)
-
+    const dispatch = useDispatch()
     return (
         <nav className="bg-light sidebar">
             <h3>Room list</h3>
