@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux'
 
-import messagesReducer from './messages'
-import roomsReducer from './rooms'
+import messagesReducer from './message'
+import roomsReducer from './room'
+import userReducer from './user'
 
 const reducers = {
     messagesReducer,
-    roomsReducer
+    roomsReducer,
+    userReducer
 }
 
 export default combineReducers(reducers)
