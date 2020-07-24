@@ -1,9 +1,9 @@
 export default (state = [], action) => {
-    switch (action.TYPE) {
+    switch (action.type) {
         case "MESSAGE_SENT":
             return [...state, action.payload]
-        case "LOAD_MESSAGES":
-            return [...action.payload]
+        case "SELECT_ROOM":
+            return [...action.payload.messages]
         default:
             return state
     }

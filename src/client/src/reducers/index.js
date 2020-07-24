@@ -4,12 +4,14 @@ import messagesReducer from './messages'
 import roomsReducer from './rooms'
 import selectedRoomReducer from './selectedRoom'
 import userReducer from './user'
+import membersReducer from './members'
 
 const reducers = {
-    messages: messagesReducer,
     rooms: roomsReducer,
     user: userReducer,
-    selectedRoom: selectedRoomReducer
+    selectedRoom: selectedRoomReducer,
+    members: membersReducer,
+    messages: messagesReducer
 }
 
 export default combineReducers(reducers)
