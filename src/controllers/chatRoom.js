@@ -13,7 +13,7 @@ module.exports = {
     getRoomHandler: async (req, res, next) => {
         try {
             const { roomId } = req.params
-            const room = chatRoomService.getRoom(roomId)
+            const room = chatRoomService.getRoomById(roomId)
             res.json(room)
         } catch (err) {
             console.log(`${req.url} error: ${err}`)
