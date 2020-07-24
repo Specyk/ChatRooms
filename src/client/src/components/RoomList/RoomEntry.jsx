@@ -11,7 +11,7 @@ export default function RoomEntry({ id, name, members, lastActivityTime, onClick
                 </div>
             </Link>
             <div>
-                <span className="badge badge-primary badge-pill">{members}</span>
+                <span className="badge badge-primary badge-pill">{members.length}</span>
             </div>
 
         </Fragment>
