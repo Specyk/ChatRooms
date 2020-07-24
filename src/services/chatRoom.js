@@ -7,7 +7,7 @@ module.exports = {
         return rooms
     },
     getRoomById: async (id) => {
-        const room = Room.findById(id)
+        const room = await Room.findById(id)
             .populate('messages')
             .populate('members')
         return room
