@@ -14,8 +14,9 @@ module.exports = {
         }
         return randoms
     },
-    connectDb: async () => {
-        const mongoURI = 'mongodb://localhost/chatrooms_test'
+    connectDb: async (mongoURI) => {
+        if (!mongoURI)
+            mongoURI = 'mongodb://localhost/chatrooms_test'
         const mongooseOptions = {
             useNewUrlParser: true,
             useUnifiedTopology: true,
