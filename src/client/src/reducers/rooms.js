@@ -1,5 +1,5 @@
 export default (state = [], action) => {
-    switch (action.TYPE) {
+    switch (action.type) {
         case "LOAD_ROOMS":
             return [...action.payload]
         default:
