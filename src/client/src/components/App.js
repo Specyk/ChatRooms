@@ -28,7 +28,7 @@ export default class App extends Component {
                     <Header />
                     <div className="row">
                         <div className="col-md-3">
-                            <RoomList chooseRoomHandler={this.chooseRoomHandler} />
+                            <RoomList />
                         </div>
                         <main className="col-md-9">
                             {this.renderMainContent()}
