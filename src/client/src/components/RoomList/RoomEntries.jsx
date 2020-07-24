@@ -8,7 +8,6 @@ export default function RoomEntries({ roomsArr, chooseRoomHandler }) {
             name={roomData.name}
             members={roomData.members}
             lastActivityTime={roomData.lastActivityTime}
-            onClickHandler={chooseRoomHandler}
         />)
 
     return (
