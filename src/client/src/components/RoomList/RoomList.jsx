@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import RoomEntries from './RoomEntries'
 import { useSelector, useDispatch } from 'react-redux'
-import chatRoomsApi from '../../api/chatRooms'
 import { loadRooms } from '../../actions/rooms'
 
 export default function RoomList() {

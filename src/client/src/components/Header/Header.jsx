@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import RoomsCount from './RoomsCount'
 import { useSelector } from 'react-redux'
