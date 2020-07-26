@@ -1,4 +1,5 @@
 const Room = require('../models/ChatRoom')
+const Message = require('../models/Message')
 
 module.exports = {
     getRooms: async () => {

@@ -7,7 +7,7 @@ export default (state = initialState, { type, payload }) => {
         case "JOIN_MEMBER":
             return [...state, payload]
         case "LEAVE_MEMBER":
-            return state.filter(m => m.name != payload.name)
+            return state.filter(m => m.name !== payload.name)
         default:
             return state
     }
