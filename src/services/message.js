@@ -1,4 +1,5 @@
 const Message = require('../models/Message')
+const Room = require('../models/Room')
 
 module.exports = {
     sendMessage: async ({ authorId, chatRoomId, messageContent }) => {
@@ -8,10 +9,22 @@ module.exports = {
             content: messageContent,
             postDate: Date.now()
         })
-        await msg.save()
+        await Promise.all([
+            Room.findOneAndUpdate(
+                { _id: chatRoomId },
+                { $push: { messages: msg._id } }
+            ),
+            msg.save()
+        ])
+        return {
+            content: msg.content,
+            postDate: msg.postDate
+        }
     },
     deleteMessageById: async (id) => {
-        await Message.findOneAndDelete({ _id: id })
+        await Message.findOneAndDelete(
+            { _id: id }
+        )
         return id
     }
 }
