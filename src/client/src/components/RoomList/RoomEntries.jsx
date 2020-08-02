@@ -12,7 +12,7 @@ export default function RoomEntries({ roomsArr, chooseRoomHandler }) {
 
     return (
         <ul className="list-group">
-            {roomsArr.map((r) => <li className="list-group-item d-flex justify-content-between align-items-center {r.isCurrent ? 'active': ''}">{createRoomEntry(r)}</li>)}
+            {roomsArr.map((r) => <li key={r._id} className="list-group-item d-flex justify-content-between align-items-center {r.isCurrent ? 'active': ''}">{createRoomEntry(r)}</li>)}
         </ul>
     )
 }

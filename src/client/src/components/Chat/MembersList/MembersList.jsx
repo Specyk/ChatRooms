@@ -2,12 +2,12 @@ import React from 'react'
 import Member from './Member'
 
 export default function MembersList({ membersArr }) {
-    const createMember = (memberData) => (
-        <Member username={memberData.username} />
+    const createMember = ({ name }) => (
+        <Member username={name} />
     )
     return (
-        <ul class="list-unstyled">
-            {membersArr.map(m => <li className="media">{createMember(m)}</li>)}
+        <ul className="list-unstyled">
+            {membersArr.map((m, key) => <li key={key} className="media">{createMember(m)}</li>)}
         </ul>
     )
 }
