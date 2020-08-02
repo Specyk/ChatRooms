@@ -6,8 +6,8 @@ export default function MessagesList({ messagesArr }) {
         <Message date={messageData.date} author={messageData.author}>{messageData.content}</Message>
     )
     return (
-        <ul class="list-unstyled">
-            {messagesArr.map(m => <li className="media">{createMessage(m)}</li>)}
+        <ul className="list-unstyled">
+            {messagesArr.map(m => <li key={m._id} className="media">{createMessage(m)}</li>)}
         </ul>
     )
 }
