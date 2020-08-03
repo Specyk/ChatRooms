@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import HeaderContainer from '../containers/HeaderContainer/HeaderContainer'
-import RoomListContainer from '../containers/RoomListContainer/RoomListContainer'
-import ChatContainer from '../containers/ChatContainer/ChatContainer'
-import Welcome from './Welcome/Welcome'
+import HeaderContainer from '../containers/Header/HeaderContainer'
+import RoomListContainer from '../containers/RoomList/RoomListContainer'
+import ChatContainer from '../containers/Chat/ChatContainer'
+import Welcome from '../containers/Welcome/WelcomeContainer'
 
 import {
     BrowserRouter,

@@ -1,15 +1,24 @@
 import React, { Fragment } from 'react'
 import { Link, } from "react-router-dom";
 
-export default function RoomEntry({ id, name, members, lastActivityTime, onClickHandler }) {
+export default function RoomEntry({ id, name, members, lastActivityTime, user }) {
     const routePath = `/chat/${id}`
     return (
         <Fragment>
-            <Link to={routePath}>
-                <div>
-                    <span>{name}</span>
-                </div>
-            </Link>
+            {user ?
+                <Link to={routePath}>
+                    <div>
+                        <span>{name}</span>
+                    </div>
+                </Link>
+                :
+                <Link to={routePath} onClick={e => e.preventDefault()}>
+                    <div>
+                        <span>{name}</span>
+                    </div>
+                </Link>
+            }
+
             <div>
                 <span className="badge badge-primary badge-pill">{members.length}</span>
             </div>

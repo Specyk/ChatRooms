@@ -1,5 +1,5 @@
 import React from 'react'
-import RoomEntry from './RoomEntry'
+import RoomEntry from '../../containers/RoomList/RoomEntryContainer'
 
 export default function RoomEntries({ roomsArr, chooseRoomHandler }) {
     const createRoomEntry = (roomData) => (
