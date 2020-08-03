@@ -5,6 +5,7 @@ import Chat from '../../components/Chat/Chat'
 
 export default function ChatContainer({ match }) {
     const name = useSelector(state => state.selectedRoom.name)
+    const user = useSelector(state => state.user)
     const messages = useSelector(state => state.selectedRoom.messages)
     const members = useSelector(state => state.selectedRoom.members)
     const dispatch = useDispatch()
@@ -16,7 +17,7 @@ export default function ChatContainer({ match }) {
         dispatch(selectRoom(match.params.chatId))
     }, [name, match.params.chatId, dispatch])
     return (
-        <Chat name={name} messages={messages} members={members} onSendMessage={onSendMessage} />
+        <Chat user={user} name={name} messages={messages} members={members} onSendMessage={onSendMessage} />
     )
 }
 
