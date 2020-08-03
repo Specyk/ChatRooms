@@ -1,8 +1,9 @@
 import React from 'react'
 import RoomEntry from '../../containers/RoomList/RoomEntryContainer'
+import CreateRoomEntryContainer from './../../containers/RoomList/CreateRoomEntryContainer'
 
-export default function RoomEntries({ roomsArr, chooseRoomHandler }) {
-    const createRoomEntry = (roomData) => (
+export default function RoomEntries({ roomsArr, isRoomCreating }) {
+    const makeRoomEntry = (roomData) => (
         <RoomEntry
             id={roomData._id}
             name={roomData.name}
@@ -12,7 +13,8 @@ export default function RoomEntries({ roomsArr, chooseRoomHandler }) {
 
     return (
         <ul className="list-group">
-            {roomsArr.map((r) => <li key={r._id} className="list-group-item d-flex justify-content-between align-items-center {r.isCurrent ? 'active': ''}">{createRoomEntry(r)}</li>)}
+            {isRoomCreating ? <CreateRoomEntryContainer /> : null}
+            {roomsArr.map((r) => <li key={r._id} className="list-group-item d-flex justify-content-between align-items-center {r.isCurrent ? 'active': ''}">{makeRoomEntry(r)}</li>)}
         </ul>
     )
 }
