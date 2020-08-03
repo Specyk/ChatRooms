@@ -1,4 +1,8 @@
 const mongoose = require('mongoose')
+require('./models/ChatRoom')
+require('./models/Message')
+require('./models/User')
+
 const expressServer = require('./server').httpServer
 const port = 5000
 
