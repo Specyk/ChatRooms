@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
-import roomsReducer from './rooms'
+import roomsListReducer from './roomsList'
 import selectedRoomReducer from './selectedRoom'
 import userReducer from './user'
 
 const reducers = {
-    rooms: roomsReducer,
+    roomsList: roomsListReducer,
     user: userReducer,
     selectedRoom: selectedRoomReducer,
 }
