@@ -14,7 +14,7 @@ export default function RoomEntry({ id, name, members, lastActivityTime, user })
                 :
                 <Link to={routePath} onClick={e => e.preventDefault()}>
                     <div>
-                        <span>{name}</span>
+                        <span className="d-inline-block text-muted" data-toggle="tooltip" title="Disabled tooltip">{name}</span>
                     </div>
                 </Link>
             }

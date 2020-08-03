@@ -1,5 +1,5 @@
 import React from 'react'
-import SignInForm from '../../containers/Welcome/SignInFormContainer'
+import SignInForm from '../../containers/SignInFormContainer'
 
 export default function Welcome({ children, username }) {
     const renderAccountStuff = () => username ? (
