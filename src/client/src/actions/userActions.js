@@ -1,4 +1,4 @@
-export const setUser = (payload) => ({
-    type: "SET_USER",
-    payload
+export const signIn = (username) => ({
+    type: "SIGN_IN",
+    payload: username
 })
