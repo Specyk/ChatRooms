@@ -3,6 +3,7 @@ import HeaderContainer from '../containers/Header/HeaderContainer'
 import RoomListContainer from '../containers/RoomList/RoomListContainer'
 import ChatContainer from '../containers/Chat/ChatContainer'
 import Welcome from '../containers/Welcome/WelcomeContainer'
+import './App.less'
 
 import {
     BrowserRouter,
@@ -19,10 +20,10 @@ export default class App extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="App">
                 <BrowserRouter>
                     <HeaderContainer />
-                    <div className="row">
+                    <div className="content">
                         <div className="col-md-3">
                             <RoomListContainer />
                         </div>

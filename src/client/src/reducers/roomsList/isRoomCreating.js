@@ -1,4 +1,4 @@
-import { CLICK_CREATE_ROOM } from '../../actions/roomsActions'
+import { CLICK_CREATE_ROOM } from 'actions/roomsActions'
 
 export default (state = false, { type, payload }) => {
     switch (type) {

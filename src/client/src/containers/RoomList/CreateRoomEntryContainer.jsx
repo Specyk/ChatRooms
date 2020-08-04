@@ -1,7 +1,7 @@
 import React from 'react'
-import CreateRoomEntry from '../../components/RoomList/CreateRoomEntry'
+import CreateRoomEntry from 'components/RoomList/CreateRoomEntry'
 import { useSelector, useDispatch } from 'react-redux'
-import { createRoom } from '../../actions/roomsActions'
+import { createRoom } from 'actions/roomsActions'
 
 export default function CreateRoomEntryContainer() {
     const rooms = useSelector(state => state.rooms)

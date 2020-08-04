@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchRooms } from '../../actions/roomsActions'
-import RoomList from '../../components/RoomList/RoomList'
-import { clickCreateRoom } from '../../actions/roomsActions'
+import { fetchRooms } from 'actions/roomsActions'
+import RoomList from 'components/RoomList/RoomList'
+import { clickCreateRoom } from 'actions/roomsActions'
 
 export default function RoomListContainer() {
     const roomsArr = useSelector(state => state.roomsList.rooms)

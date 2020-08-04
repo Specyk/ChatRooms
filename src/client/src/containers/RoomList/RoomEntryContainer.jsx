@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import RoomEntry from '../../components/RoomList/RoomEntry'
+import RoomEntry from 'components/RoomList/RoomEntry'
 import { useSelector } from 'react-redux'
 
 export default function RoomEntryContainer({ id, name, lastActivityTime }) {

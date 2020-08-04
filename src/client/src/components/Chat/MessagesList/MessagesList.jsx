@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Message from './Message'
 
 export default function MessagesList({ messagesArr }) {
-    const createMessage = (messageData) => (
+    const renderMessage = (messageData) => (
         <Message date={messageData.date} author={messageData.author}>{messageData.content}</Message>
     )
+
+    const renderContent = () => {
+        return messagesArr > 0 ?
+            <ul className="list-unstyled">
+                {messagesArr.map((m, key) => <li key={key} className="media">{renderMessage(m)}</li>)}
+            </ul> :
+            <p>No messages</p>
+    }
     return (
-        <ul className="list-unstyled">
-            {messagesArr.map(m => <li key={m._id} className="media">{createMessage(m)}</li>)}
-        </ul>
+        <Fragment>
+            {renderContent()}
+        </Fragment>
+    )
+
+
+    return (
+        <div>
+            {renderContent()}
+        </div>
     )
 }

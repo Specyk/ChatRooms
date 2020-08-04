@@ -1,4 +1,4 @@
-import { FETCH_ROOMS, CREATE_ROOM } from '../../actions/roomsActions'
+import { FETCH_ROOMS, CREATE_ROOM } from 'actions/roomsActions'
 
 export default (state = [], action) => {
     switch (action.type) {

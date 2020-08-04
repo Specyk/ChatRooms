@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectRoom, sendMessage } from '../../actions/selectedRoomActions'
-import Chat from '../../components/Chat/Chat'
+import { selectRoom, sendMessage } from 'actions/selectedRoomActions'
+import Chat from 'components/Chat/Chat'
 
 export default function ChatContainer({ match }) {
     const name = useSelector(state => state.selectedRoom.name)

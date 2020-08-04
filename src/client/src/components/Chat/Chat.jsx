@@ -2,7 +2,7 @@ import React from 'react'
 import MessagesList from './MessagesList/MessagesList'
 import MembersList from './MembersList/MembersList'
 import SendMessageForm from './SendMessageForm'
-import SignInFormContainer from '../../containers/SignInFormContainer'
+import SignInFormContainer from 'containers/SignInFormContainer'
 
 export default function Chat({ user, name, messages, members, onSendMessage }) {
     const renderMainChat = () => {
