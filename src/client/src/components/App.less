@@ -1,3 +1,17 @@
 .App {
-  background-color: red;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-areas:
+    "header header"
+    "aside main";
+  grid-gap: 1rem;
+}
+
+aside {
+  grid-area: aside;
+  padding: 1rem;
+}
+
+main {
+  grid-area: main;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Chat.css'
+import './Chat.less'
 
 export default function SendMessageForm({ onSendMessage }) {
     const [message, setMessage] = useState('')

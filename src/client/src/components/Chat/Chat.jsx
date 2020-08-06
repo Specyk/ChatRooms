@@ -3,19 +3,20 @@ import MessagesList from './MessagesList/MessagesList'
 import MembersList from './MembersList/MembersList'
 import SendMessageForm from './SendMessageForm'
 import SignInFormContainer from 'containers/SignInFormContainer'
+import './Chat.less'
 
 export default function Chat({ user, name, messages, members, onSendMessage }) {
     const renderMainChat = () => {
         if (user) {
             return (
-                <div className="row">
-                    <div className="col-md-8 position-relative">
+                <div className="Chat">
+                    <main>
                         <MessagesList messagesArr={messages} />
                         <SendMessageForm onSendMessage={onSendMessage} />
-                    </div>
-                    <div className="col-md-4">
+                    </main>
+                    <aside>
                         <MembersList membersArr={members} />
-                    </div>
+                    </aside>
                 </div>
             )
         } else {
@@ -31,8 +32,8 @@ export default function Chat({ user, name, messages, members, onSendMessage }) {
     }
 
     return (
-        <div>
-            <div className="row">
+        <div className="Chat">
+            <div>
                 <h3>{name}</h3>
             </div>
             { renderMainChat()}

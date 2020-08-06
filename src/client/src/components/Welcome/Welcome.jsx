@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SignInForm from 'containers/SignInFormContainer'
 
 export default function Welcome({ children, username }) {
@@ -6,12 +6,12 @@ export default function Welcome({ children, username }) {
         <h3>Hi {username}</h3>
     ) : (<SignInForm />)
     return (
-        <div className="jumbotron jumbotron-fluid">
-            <div className="container">
-                <h1 className="display-4">Welcome!</h1>
-                <p className="lead">{children}</p>
+        <Fragment>
+            <div className="Welcome">
+                <h2>Welcome!</h2>
+                <p>{children}</p>
             </div>
-            {renderAccountStuff()}
-
-        </div>)
+            { renderAccountStuff()}
+        </Fragment >
+    )
 }

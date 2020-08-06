@@ -23,16 +23,14 @@ export default class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <HeaderContainer />
-                    <div className="content">
-                        <div className="col-md-3">
-                            <RoomListContainer />
-                        </div>
-                        <main className="col-md-9">
-                            {this.renderMainContent()}
-                        </main>
-                    </div>
-                </BrowserRouter>
-            </div>
+                    <aside>
+                        <RoomListContainer />
+                    </aside>
+                    <main>
+                        {this.renderMainContent()}
+                    </main>
+                </BrowserRouter >
+            </div >
         )
     }
 }
