@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import MessagesList from './MessagesList/MessagesList'
 import MembersList from './MembersList/MembersList'
 import SendMessageForm from './SendMessageForm'
@@ -9,7 +9,7 @@ export default function Chat({ user, name, messages, members, onSendMessage }) {
     const renderMainChat = () => {
         if (user) {
             return (
-                <div className="Chat">
+                <Fragment>
                     <main>
                         <MessagesList messagesArr={messages} />
                         <SendMessageForm onSendMessage={onSendMessage} />
@@ -17,26 +17,26 @@ export default function Chat({ user, name, messages, members, onSendMessage }) {
                     <aside>
                         <MembersList membersArr={members} />
                     </aside>
-                </div>
+                </Fragment >
             )
         } else {
             return (
-                <div>
-                    <div>
+                <Fragment>
+                    <main>
                         To read and send messages you have to sign in
-                    </div>
-                    <SignInFormContainer />
-                </div>
+                    </main>
+                    <aside>
+                        <SignInFormContainer />
+                    </aside>
+                </Fragment>
             )
         }
     }
 
     return (
         <div className="Chat">
-            <div>
-                <h3>{name}</h3>
-            </div>
-            { renderMainChat()}
+            <h3>{name}</h3>
+            {renderMainChat()}
         </div>
     )
 }

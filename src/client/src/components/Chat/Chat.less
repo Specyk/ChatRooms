@@ -1,6 +1,21 @@
 .Chat {
   display: grid;
-  grid-template-columns: auto 20rem;
+  grid-template-columns: auto 16rem;
+  grid-template-rows: 2em auto;
+  aside {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  main {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .MessagesList {
+      height: 100vh;
+      overflow: scroll;
+    }
+  }
 }
 
 .SendMessageForm {
@@ -9,4 +24,8 @@
   position: fixed;
   bottom: 0;
   background-color: #ddd;
+}
+
+aside {
+  display: flex;
 }

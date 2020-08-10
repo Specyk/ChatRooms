@@ -1,17 +1,21 @@
 import React, { Fragment } from 'react'
 import SignInForm from 'containers/SignInFormContainer'
+import './Welcome.less'
 
 export default function Welcome({ children, username }) {
     const renderAccountStuff = () => username ? (
         <h3>Hi {username}</h3>
     ) : (<SignInForm />)
     return (
-        <Fragment>
-            <div className="Welcome">
+        <div className="Welcome">
+            <section>
                 <h2>Welcome!</h2>
                 <p>{children}</p>
-            </div>
-            { renderAccountStuff()}
-        </Fragment >
+            </section>
+            <section>
+                {renderAccountStuff()}
+            </section>
+
+        </div>
     )
 }

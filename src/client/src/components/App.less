@@ -1,10 +1,13 @@
 .App {
   display: grid;
   grid-template-columns: 20rem 1fr;
+  grid-template-rows: 4rem 1fr;
   grid-template-areas:
     "header header"
     "aside main";
   grid-gap: 1rem;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 aside {
@@ -14,4 +17,5 @@ aside {
 
 main {
   grid-area: main;
+  position: relative;
 }

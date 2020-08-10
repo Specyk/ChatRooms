@@ -7,16 +7,16 @@ export default function MessagesList({ messagesArr }) {
     )
 
     const renderContent = () => {
-        return messagesArr > 0 ?
+        return messagesArr.length > 0 ?
             <ul className="list-unstyled">
                 {messagesArr.map((m, key) => <li key={key} className="media">{renderMessage(m)}</li>)}
             </ul> :
             <p>No messages</p>
     }
     return (
-        <Fragment>
+        <div className="MessagesList">
             {renderContent()}
-        </Fragment>
+        </div>
     )
 
 
