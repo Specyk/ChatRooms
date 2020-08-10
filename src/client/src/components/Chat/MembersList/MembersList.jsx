@@ -13,7 +13,7 @@ export default function MembersList({ membersArr }) {
     }
 
     return (
-        <ul className="list-unstyled">
+        <ul className="MembersList">
             {renderContent()}
         </ul>
 
