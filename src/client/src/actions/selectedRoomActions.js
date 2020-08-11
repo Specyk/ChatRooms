@@ -8,10 +8,10 @@ export const selectRoom = (chatId) => async (dispatch, state) => {
     })
 }
 
-export const sendMessage = (roomId, message) => async dispatch => {
+export const sendMessage = (roomId, message) => {
     // socket io emit event sendMessage width data = {roomId, message}
-    dispatch({
-        type: "SEND_MESSAGE",
+    return ({
+        type: "MESSAGE_SENT",
         payload: {
             message
         }

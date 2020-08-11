@@ -12,7 +12,7 @@ export default function Chat({ user, name, messages, members, onSendMessage }) {
                 <Fragment>
                     <main>
                         <MessagesList messagesArr={messages} />
-                        <SendMessageForm onSendMessage={onSendMessage} />
+                        <SendMessageForm onSubmit={onSendMessage} />
                     </main>
                     <aside>
                         <MembersList membersArr={members} />

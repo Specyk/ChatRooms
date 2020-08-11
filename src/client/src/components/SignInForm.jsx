@@ -1,18 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Field } from 'redux-form'
 
-const bind = setter => e => setter(e.target.value)
-
-export default function SignIn({ onSignInSubmit }) {
-    const onFormSubmit = e => {
-        e.preventDefault()
-        onSignInSubmit(nickname)
-    }
-
-    const [nickname, setNickname] = useState('')
+export default function SignIn({ handleSubmit }) {
     return (
-        <form onSubmit={e => onFormSubmit(e)}>
-            <input value={nickname} onChange={bind(setNickname)} type="text" placeholder="Your username" />
-            <input type="submit" value="Sign in" />
+        <form onSubmit={handleSubmit}>
+            <Field component="input" type="text" name="username" placeholder="Your username" />
+            <button type="submit">Sign in</button>
         </form>
     )
 }

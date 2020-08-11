@@ -1,19 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Chat.less'
+import { Field, reduxForm } from 'redux-form'
 
-export default function SendMessageForm({ onSendMessage }) {
-    const [message, setMessage] = useState('')
-
+function SendMessageForm({ handleSubmit }) {
     return (
-        <form className='SendMessageForm' onSubmit={() => onSendMessage(message)}>
-            <div className="form-row align-items-center">
-                <div className="col-auto">
-                    <input type="text" onChange={e => setMessage(e.target.value)} className="form-control" placeholder="Your message..." />
-                </div>
-                <div className="col-auto">
-                    <input type="submit" value="Send" />
-                </div>
-            </div>
+        <form onSubmit={handleSubmit} className='SendMessageForm'>
+            <Field name="messageContent" component="input" type="text" placeholder="Your message..." />
+            <button type="submit">Send</button>
         </form>
     )
 }
+export default reduxForm({
+    form: 'sendMessage'
+})(SendMessageForm)

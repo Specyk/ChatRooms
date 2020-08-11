@@ -1,19 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { reduxForm, Field } from 'redux-form'
 
-const bind = setter => e => setter(e.target.value)
-
-export default function CreateRoomEntry({ onCreateRoomSubmit }) {
-    const [newRoomName, setNewRoomName] = useState('')
-
-    const onCreateEntrySubmit = e => {
-        e.preventDefault()
-        onCreateRoomSubmit(newRoomName)
-    }
-
+function CreateRoomEntry({ handleSubmit }) {
     return (
-        <form onSubmit={onCreateEntrySubmit}>
-            <input type="text" placeholder="Enter room name" onChange={bind()} />
+        <form onSubmit={handleSubmit}>
+            <Field name="roomName" type="text" placeholder="Enter room name" />
             <button type="submit">Create</button>
         </form>
     )
 }
+
+export default reduxForm({
+    form: "createRoom"
+})(CreateRoomEntry)

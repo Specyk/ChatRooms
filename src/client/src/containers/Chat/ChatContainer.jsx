@@ -10,8 +10,8 @@ export default function ChatContainer({ match }) {
     const members = useSelector(state => state.selectedRoom.members)
     const dispatch = useDispatch()
 
-    const onSendMessage = msgContent => {
-        dispatch(sendMessage(match.params.chatRoomId, msgContent))
+    const onSendMessage = ({ messageContent }) => {
+        dispatch(sendMessage(match.params.chatRoomId, messageContent))
     }
     useEffect(() => {
         dispatch(selectRoom(match.params.chatId))

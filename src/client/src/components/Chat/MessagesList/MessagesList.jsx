@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Message from './Message'
 
 export default function MessagesList({ messagesArr }) {
@@ -13,15 +13,9 @@ export default function MessagesList({ messagesArr }) {
             </ul> :
             <p>No messages</p>
     }
+
     return (
         <div className="MessagesList">
-            {renderContent()}
-        </div>
-    )
-
-
-    return (
-        <div>
             {renderContent()}
         </div>
     )
