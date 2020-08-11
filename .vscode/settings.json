@@ -1,0 +1,10 @@
+{
+  "path-intellisense.mappings": {
+    "/": "${workspaceRoot}",
+    "components": "${workspaceRoot}/src/client/src/components",
+    "reducers": "${workspaceRoot}/src/client/src/actions",
+    "actions": "${workspaceRoot}/src/client/src/reducers",
+    "containers": "${workspaceRoot}/src/client/src/containers",
+    "api": "${workspaceRoot}/src/client/src/api"
+  }
+}
