@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import HeaderContainer from '../containers/Header/HeaderContainer'
-import RoomListContainer from '../containers/RoomList/RoomListContainer'
-import ChatContainer from '../containers/Chat/ChatContainer'
-import Welcome from '../containers/Welcome/WelcomeContainer'
+import history from '../history'
+
+import HeaderContainer from 'containers/Header/HeaderContainer'
+import RoomListContainer from 'containers/RoomList/RoomListContainer'
+import ChatContainer from 'containers/Chat/ChatContainer'
+import Welcome from 'containers/Welcome/WelcomeContainer'
 import './App.less'
 
 import {
-    BrowserRouter,
+    Router,
     Switch,
     Route,
 } from "react-router-dom";
@@ -21,7 +23,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="App">
-                <BrowserRouter>
+                <Router history={history}>
                     <HeaderContainer />
                     <aside>
                         <RoomListContainer />
@@ -29,7 +31,7 @@ export default class App extends Component {
                     <main>
                         {this.renderMainContent()}
                     </main>
-                </BrowserRouter >
+                </Router >
             </div >
         )
     }
