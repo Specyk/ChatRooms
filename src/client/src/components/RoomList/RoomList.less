@@ -12,6 +12,7 @@
       border-radius: 50%;
       color: #004;
       border-color: val(--primary-color);
+      border-width: 0.02rem;
       cursor: pointer;
       transition: background 300ms;
       outline: none;
@@ -39,8 +40,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.2rem;
+        padding: 0 0.2rem;
         gap: 0.2rem;
+        input {
+          width: 100%;
+        }
       }
     }
     .active {

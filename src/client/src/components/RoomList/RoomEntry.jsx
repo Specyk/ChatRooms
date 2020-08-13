@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link, } from "react-router-dom";
 
 const createLink = (name, routePath, isActive) => {
@@ -13,7 +13,7 @@ const createLink = (name, routePath, isActive) => {
 }
 
 
-export default function RoomEntry({ id, name, members, lastActivityTime, user }) {
+export default function RoomEntry({ id, name, members }) {
     const routePath = `/chat/${id}`
     return (
         <div>
