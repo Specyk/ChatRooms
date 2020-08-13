@@ -2,7 +2,7 @@ import React from 'react'
 import RoomEntry from 'containers/RoomList/RoomEntryContainer'
 import NewRoomEntryContainer from 'containers/RoomList/NewRoomEntryContainer'
 
-const makeRoomEntry = (roomData) => (
+const createRoomEntry = (roomData) => (
     <RoomEntry
         id={roomData._id}
         name={roomData.name}
@@ -11,11 +11,11 @@ const makeRoomEntry = (roomData) => (
     />)
 
 export default function RoomEntries({ roomsArr, isRoomCreating }) {
-
+    const formatClassName = active => active ? `active` : ''
     return (
         <ul>
             {isRoomCreating ? <li key="newRoom"><NewRoomEntryContainer /></li> : null}
-            {roomsArr.map((r) => <li key={r._id} className="list-group-item d-flex justify-content-between align-items-center {r.isCurrent ? 'active': ''}">{makeRoomEntry(r)}</li>)}
+            {roomsArr.map(r => <li key={r._id} className={formatClassName(r.isActive)}>{createRoomEntry(r)}</li>)}
         </ul>
     )
 }

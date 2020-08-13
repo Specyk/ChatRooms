@@ -1,4 +1,9 @@
 .RoomList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  align-items: space-between;
   header {
     display: flex;
     justify-content: space-between;
@@ -9,6 +14,7 @@
       border-color: val(--primary-color);
       cursor: pointer;
       transition: background 300ms;
+      outline: none;
     }
     .active {
       background-color: #444;
@@ -16,6 +22,22 @@
     }
     .addBtn:hover {
       .active;
+    }
+  }
+  main {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 0.6rem;
+      flex-direction: column;
+    }
+    li {
+      transition: background 300ms;
+      padding: 0.2rem;
+      border-radius: 0.3rem;
+    }
+    li:hover {
+      background-color: var(--bgLight);
     }
   }
 }
