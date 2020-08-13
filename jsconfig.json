@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "emojis/*": ["fixtures/emojis/*"],
       "components/*": ["./src/client/src/components/*"],
       "containers/*": ["./src/client/src/containers/*"],
       "api/*": ["./src/client/src/api/*"],
