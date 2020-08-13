@@ -12,6 +12,7 @@ const createRoomEntry = (roomData) => (
 
 export default function RoomEntries({ roomsArr, isRoomCreating }) {
     const formatClassName = active => active ? `active` : ''
+
     return (
         <ul>
             {isRoomCreating ? <li key="newRoom"><NewRoomEntryContainer /></li> : null}

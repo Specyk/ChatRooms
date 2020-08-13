@@ -12,7 +12,7 @@ const SignInReduxForm = reduxForm({
 export default () => {
     const dispatch = useDispatch()
     const onSignInSubmit = ({ username }) => {
-        dispatch(signIn())
+        dispatch(signIn(username))
     }
 
     return (
