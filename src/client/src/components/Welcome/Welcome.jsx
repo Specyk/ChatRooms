@@ -1,11 +1,13 @@
 import React from 'react'
-import SignInForm from 'containers/SignInFormContainer'
+import SignInFormContainer from 'containers/SignInFormContainer'
 import './Welcome.less'
 
+
 export default function Welcome({ children, username }) {
-    const renderAccountStuff = () => username ? (
-        <h3>Hi {username}</h3>
-    ) : (<SignInForm />)
+    const renderAccountStuff = () => username ?
+        (<h3>Hi {username}</h3>) :
+        (<SignInFormContainer />)
+
     return (
         <div className="Welcome">
             <section>
