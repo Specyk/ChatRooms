@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import RoomEntries from './RoomEntries'
 import './RoomList.less'
 
@@ -7,15 +7,15 @@ const createAddBtn = (isActive, onClickHandler) => {
     return <button onClick={() => onClickHandler()} className={className}>+</button>
 }
 
-export default function RoomList({ rooms, isAdding, onAddIconClick }) {
+export default function RoomList({ rooms, isAdding: isRoomCreating, onAddIconClick }) {
     return (
         <div className="RoomList">
             <header>
                 <h3>Room list</h3>
-                {createAddBtn(isAdding, onAddIconClick)}
+                {createAddBtn(isRoomCreating, onAddIconClick)}
             </header>
             <main>
-                <RoomEntries isAdding={isAdding} roomsArr={rooms} />
+                <RoomEntries isRoomCreating={isRoomCreating} roomsArr={rooms} />
             </main>
         </div>
     )
