@@ -1,11 +1,11 @@
 import React from 'react'
 import { Field } from 'redux-form'
 
-const renderInput = (formProps) => (
+const renderInput = ({ input }) => (
     <input
         type="text"
-        onChange={formProps.input.onChange}
-        value={formProps.input.value}
+        onChange={input.onChange}
+        value={input.value}
         placeholder="Your username"
     />
 )
