@@ -4,17 +4,18 @@ import { signIn } from '../actions/userActions'
 import { reduxForm } from 'redux-form'
 import SignInForm from 'components/SignInForm'
 
-const SignInFormContainer = reduxForm({
+const onSignInSubmit = ({ username }) => {
+    console.log(username)
+}
+
+
+const SignInReduxForm = reduxForm({
     form: "signIn"
 })(SignInForm)
+// ! przerobić SignInForm na class component albo jakos to roziwazac
 
-export default function SignInContainer({ children }) {
-    const dispatch = useDispatch()
-    const onSignInSubmit = ({ nickname }) => {
-        dispatch(signIn(nickname))
-    }
-
+export default () => {
     return (
-        <SignInFormContainer onSubmit={onSignInSubmit} />
+        <SignInReduxForm onSubmit={onSignInSubmit} />
     )
 }

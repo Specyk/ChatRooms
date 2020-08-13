@@ -10,9 +10,9 @@ const renderInput = (formProps) => (
     />
 )
 
-export default function SignInForm(props) {
+export default function SignInForm({ handleSubmit }) {
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <Field component={renderInput} name="username" />
             <button type="submit">Sign in</button>
         </form>
