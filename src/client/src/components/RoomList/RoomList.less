@@ -2,5 +2,20 @@
   header {
     display: flex;
     justify-content: space-between;
+    .addBtn {
+      padding: 0 0.8rem;
+      border-radius: 50%;
+      color: #004;
+      border-color: val(--primary-color);
+      cursor: pointer;
+      transition: background 300ms;
+    }
+    .active {
+      background-color: #444;
+      color: #efefff;
+    }
+    .addBtn:hover {
+      .active;
+    }
   }
 }
