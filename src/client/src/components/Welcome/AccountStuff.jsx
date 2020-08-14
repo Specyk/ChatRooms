@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import AccountGreeting from './AccountGreeting'
 import SignInFormContainer from 'containers/SignInFormContainer'
