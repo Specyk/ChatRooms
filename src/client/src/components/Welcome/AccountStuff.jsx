@@ -1,7 +1,7 @@
 import React from 'react'
 
 import AccountGreeting from './AccountGreeting'
-import SignInFormContainer from 'containers/SignInFormContainer'
+import SignInFormContainer from 'containers/common/SignInFormContainer'
 
 export default ({ username }) => (
     username ?

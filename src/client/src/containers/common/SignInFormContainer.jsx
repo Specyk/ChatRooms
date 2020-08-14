@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { signIn } from '../actions/userActions'
+import { signIn } from 'actions/userActions'
 import { reduxForm } from 'redux-form'
-import SignInForm from 'components/SignInForm'
+import SignInForm from 'components/common/SignInForm'
 
 
 const SignInReduxForm = reduxForm({
