@@ -17,7 +17,7 @@ export default function RoomEntry({ id, name, members }) {
     const routePath = `/chat/${id}`
     return (
         <div>
-            {createLink(name, routePath)}
+            {createLink(name, routePath, true)}
             <span className="badge">{members.length}</span>
         </div>
     )
