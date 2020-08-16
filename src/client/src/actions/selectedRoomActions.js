@@ -4,7 +4,7 @@ export const selectRoom = (chatId) => async (dispatch, state) => {
     const chatRoom = await chatRoomsApi.get(`/chatRooms/${chatId}`)
     return dispatch({
         type: "SELECT_ROOM",
-        payload: chatRoom.data
+        payload: { ...chatRoom.data, selectedRoomId: chatId }
     })
 }
 
