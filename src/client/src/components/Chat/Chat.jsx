@@ -6,37 +6,20 @@ import SignInFormContainer from 'containers/common/SignInFormContainer'
 import './Chat.less'
 
 export default function Chat({ user, name, messages, members, onSendMessage }) {
-    const renderMainChat = () => {
-        if (user) {
-            return (
-                <Fragment>
-                    <main>
-                        <MessagesList messagesArr={messages} />
-                        <SendMessageForm onSubmit={onSendMessage} />
-                    </main>
-                    <aside>
-                        <MembersList membersArr={members} />
-                    </aside>
-                </Fragment >
-            )
-        } else {
-            return (
-                <Fragment>
-                    <main>
-                        To read and send messages you have to sign in
-                    </main>
-                    <aside>
-                        <SignInFormContainer />
-                    </aside>
-                </Fragment>
-            )
-        }
-    }
+    const renderMainChat = () => user ?
+        <span></span> :
+        <p>To read and send messages you have to sign in</p>
 
     return (
         <div className="Chat">
-            <h3>{name}</h3>
-            {renderMainChat()}
+            <header>{name}</header>
+            <main>
+                <MessagesList messagesArr={messages} />
+                <SendMessageForm onSubmit={onSendMessage} />
+            </main>
+            <aside>
+                <MembersList membersArr={members} />
+            </aside>
         </div>
     )
 }

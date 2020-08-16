@@ -1,7 +1,9 @@
 .Chat {
+  width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-columns: auto 16rem;
-  grid-template-rows: 3rem auto;
+  grid-template-columns: 1fr 16rem;
+  grid-template-rows: 3rem 1fr;
   aside {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -15,19 +17,18 @@
   }
   main {
     grid-column: 1/2;
-    .MessagesList {
-      height: 100vh;
-      overflow: scroll;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .SendMessageForm {
+      background-color: #ddd;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      flex: 0 0 2rem;
     }
   }
-}
-
-.SendMessageForm {
-  margin: 0 auto;
-  width: 70%;
-  position: fixed;
-  bottom: 0;
-  background-color: #ddd;
 }
 
 aside {
