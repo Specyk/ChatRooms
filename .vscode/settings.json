@@ -1,6 +1,6 @@
 {
   "path-intellisense.mappings": {
-    "/": "${workspaceRoot}",
+    "@": "${workspaceRoot}/src",
     "components": "${workspaceRoot}/src/client/src/components",
     "reducers": "${workspaceRoot}/src/client/src/actions",
     "actions": "${workspaceRoot}/src/client/src/reducers",
