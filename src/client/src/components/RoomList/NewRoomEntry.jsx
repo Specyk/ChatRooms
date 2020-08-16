@@ -12,9 +12,11 @@ export default function NewRoomEntry({ handleSubmit }) {
         />
     )
     return (
-        <form onSubmit={handleSubmit}>
-            <Field component={createRoomNameInput} />
-            <Button type="submit">Create</Button>
-        </form>
+        <li key="newRoom">
+            <form onSubmit={handleSubmit}>
+                <Field component={createRoomNameInput} />
+                <Button type="submit">Create</Button>
+            </form>
+        </li>
     )
 }
